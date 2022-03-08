@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+#    url: jdbc:postgresql://127.0.0.1:15432/gaussdb?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:postgresql://localhost:15432/postgres?useUnicode=true&characterEncoding=utf8
+    username: gaussdb
+    password: Vurtne1012@
+    driver-class-name: org.postgresql.Driver
+
+mybatis:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  type-aliases-package: com.vurtne.entity   # 映射实体类包名，不区分大小写
+  configuration:
+    map-underscore-to-camel-case: true  # 开启全局的驼峰命名规则
